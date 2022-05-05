@@ -1,0 +1,182 @@
+@font-face{font-family: "THSarabunNew, san-serif";}
+
+    body { 
+        font-family: 'THSarabunNew', sans-serif; 
+    }
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .checkout{
+        max-height: 100vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+    }
+    
+    .order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+        width: 100%;
+        height: 85%;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+		margin-top: 75px;
+        padding-top: 10px;
+    }
+
+    .order .head{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 15%;
+    }
+    .head .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 80%;
+        height: 100%;
+        padding-left: 20px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .head .right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 17%;
+        height: 100%;
+		font-weight: 500;
+        font-size: 18px;
+    }  
+      
+    .order .item-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 80%;
+    }
+
+    .scoll-bar { 
+        max-width :1000px; 
+        width: 100%;
+        max-height: 350px;
+        overflow:auto; 
+    } 
+    
+    .Cart-Items{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 40%;
+    }
+
+    .image-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        height: 100%;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        width:67.5%;
+        height: 100%;
+        padding: 15px 0 0 5px;
+    }
+
+    .about .title{
+        font-size: 20px;
+        font-weight: 50;
+    }
+
+    .price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 15%;
+        height: 100%;
+    }
+
+    .quantity{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 15%;
+        height: 100%;
+    }
+
+    .order .place-order{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 35%;
+        padding-right: 20px;
+    }
+
+    .place-order a{
+        color:#ffffff; 
+        text-align: center; 
+        width: 125px; 
+        height: 50px;
+        padding: 15px; 
+        background-color: #7365a2; 
+        border-radius: 10px; 
+        border-color: #7365a2; 
+        font-weight: 600;
+        text-decoration: none;
+    }

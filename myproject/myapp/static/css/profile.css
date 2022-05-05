@@ -1,0 +1,213 @@
+@font-face{font-family: "THSarabunNew, san-serif";}
+
+  body { 
+    font-family: 'THSarabunNew', sans-serif; 
+  }
+  a {
+    text-decoration: none;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+  }
+
+  .prof{
+    width: 100%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid ;
+    border-color: #ffffff;
+
+  }
+
+  div .user{
+    display: flex;
+	  flex-direction: column;
+    align-items: center;
+	  justify-content: center;
+    display: inline-block;
+    width: 100%;
+    height:20%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+  }
+
+  div .user .dis{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+    padding-top: 30px;
+  }
+
+div .user .dis .avatar2 {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  div .user .dis .avatar2 .img2 {
+    height: 9rem;
+    width: 9rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -10px;
+  }
+  div .user .dis .avatar2 .img2 img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  div .user .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;  
+  }
+
+  div .user .name span {
+    margin-top: -5px;
+  }
+
+  div .user .name span a i{
+    margin-right: 5px;
+  }
+
+  div .login-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #b9b9b9;
+    margin-top: 10px;
+  }
+
+  .row .login-profile .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+  }
+
+  div .login-profile .title h1{
+    font-size: 28px;
+  }
+
+  div .login-profile .title p{
+    font-size: 18px;
+    margin-top: -5px;
+  }
+
+  div .login-profile .title .line{
+    border:none;
+    border-top:1.5px solid #eeecec;
+    color:#fff;
+    background-color:#fff;
+    height:1px;
+    width:95%;
+    margin-top: 20px;
+  }
+
+  .row .login-profile .edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+  }
+
+  div .login-profile .edit .user-details p label{
+    font-size:18px;
+    color: #717171;
+    font-weight: 200;
+
+  }
+  div .login-profile .edit .user-details p input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px; 
+    font-size:18px;
+    border: 1px solid ;
+    border-color: rgb(210, 208, 208);
+    color: #a4a4a4;
+    padding-left: 5px; 
+  }
+
+  div .login-profile .edit .user-details .button{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+  }
+
+  div .login-profile .edit .user-details .button input{
+    color:#ffffff; 
+    text-align: center; 
+    width: 40%; 
+    height: 40%;
+    padding: 6px; 
+    background-color: #7365a2; 
+    border-radius: 10px; 
+    border-color: #7365a2; 
+    font-weight: 700;
+    margin-top: -30px;
+  }

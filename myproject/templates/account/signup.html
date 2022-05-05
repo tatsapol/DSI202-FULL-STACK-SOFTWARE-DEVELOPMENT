@@ -1,0 +1,85 @@
+{% load static %}
+{% block content %}
+<html >
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha38">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons">
+
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fa-solid fa-paw"></i></label>
+      <div class="content">
+        <div class="logo"><a href='/' class="image"> <img src="https://drive.google.com/uc?id=1LSxUx57jJTPDh1MRZK21zfeOKzmJVAk3" alt="" height="50px"> </a></div>
+        <ul  class="links">
+          <li><a href="/accounts/login/">REGISTER/LOGIN</a></li>
+          <li><a href="/profile/">MY ACCOUNT</a></li>
+          <li><a href="http://localhost:8000/about/">ABOUT BEAR</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>     
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia%22%3E">
+    <link rel="stylesheet" href="fonts/thsarabunnew.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<body>
+  <div class="row">
+    <div class="logoB" >
+      <img src="{% static 'images/logo/BBlogo.jpg' %}">
+    </div>
+    <form class="signup" id="signup_form" method="post" action="/accounts/signup/">
+      <input type="hidden" name="csrfmiddlewaretoken" value="g2JblHQZY5ONiLPHW7njEaoj7R973s01IhMjsmCU0mc8rPqZ9Kr1uZp2dvlPhin3">{% csrf_token %}
+      <div class="signup">
+        <div class="regis-plus">
+          <label for="id_login">Username</label>
+          <input type="text" name="login" placeholder="Username" autocomplete="username" maxlength="150" required id="id_login">
+        </div>
+        <div class="regis-plus">
+          <label for="id_email">E-mail⠀⠀⠀</label> 
+          <input type="email" name="email" placeholder="E-mail address" autocomplete="email" id="id_email">
+        </div>
+        <div class="regis-plus">
+          <label for="id_password1">Password</label> 
+          <input type="password" name="password1" placeholder="Password" autocomplete="new-password" required id="id_password1">
+        </div>
+        <div class="regis-plus">
+          <label for="id_password2">Confirm⠀</label> 
+          <input type="password" name="password2" placeholder="Comfirm Password" autocomplete="new-password" required id="id_password2">
+        </div>
+        <div class="submit">
+          <button type="submit">REGISTER</button>
+        </div>
+        <div class="text">
+          <p>Do you have a account?<a href="/accounts/login/">Click here to login</a></p>       
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+{% endblock content %}

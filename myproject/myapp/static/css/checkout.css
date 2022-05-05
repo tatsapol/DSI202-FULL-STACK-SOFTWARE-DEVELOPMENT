@@ -1,0 +1,282 @@
+@font-face{font-family: "THSarabunNew, san-serif";}
+
+    body { 
+        font-family: 'THSarabunNew', sans-serif; 
+    }
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    .checkout{
+        max-height: 100vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+    }
+
+    .address{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        max-width: 1000px;
+        width: 100%;
+        height: 20%;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+        margin-top: 75px;
+        margin-bottom: 15px;
+    }
+
+    .address .title1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 35%;
+        padding-left: 20px;
+        color: #eb6d79;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .address .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 65%;
+    }
+
+    .address .name{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 30%;
+        height: 100%;
+        padding: 20px 0 0 20px;
+        line-height: 10px;
+    }
+
+    .address .name .names{
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .address .top .name .mobile{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .address .add{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 70%;
+        height: 100%;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+
+    .order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+        width: 100%;
+        height: 60%;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+    }
+
+    .order .head{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 100%;
+        height: 15%;
+    }
+
+    .head .left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 69%;
+        height: 100%;
+        padding-left: 20px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .head .center{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 15%;
+        height: 100%;
+    }
+
+    .head .right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 15%;
+        height: 100%;
+    }  
+      
+    .order .item-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 100%;
+        height: 50%;
+    }
+
+    .scoll-bar { 
+        max-width :1000px; 
+        width: 100%;
+        max-height: 200px;
+        overflow:auto; 
+    } 
+    
+    .Cart-Items{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        height: 70%;
+    }
+
+    .image-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        height: 100%;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width:55%;
+        height: 100%;
+        padding: 40px 0 0 5px;
+    }
+
+    .about .title{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 10px;
+    }
+
+    .price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 15%;
+        height: 100%;
+    }
+
+    .quantity{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        width: 15%;
+        height: 100%;
+    }
+
+    .order .place-order{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+        width: 100%;
+        height: 35%;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: #fff;
+        padding-right: 20px;
+    }
+
+    .order .place-order form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .order .place-order form img{
+        height: 120px;
+    }
+
+    .order .place-order form input{
+        color:#ffffff; 
+        text-align: center; 
+        width: 125px; 
+        height: 50px;
+        background-color: #7365a2; 
+        border-radius: 10px; 
+        border-color: #7365a2; 
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    @media screen and (max-width: 500px){
+        .address .top .name .names{
+            font-size: 18px;
+        
+        }
+    }
+    
+
+
+

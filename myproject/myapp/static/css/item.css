@@ -1,0 +1,241 @@
+@font-face{font-family: "Gill sans, san-serif";
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.wofff') format('woff');
+   }
+   *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .item{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+        max-width: 1000px;
+        width: 100%;
+        height: 85%;
+        background-color: #fff;
+        padding: 10px 10px 10px 10px;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+    }
+
+    .pic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+    }
+
+    .pic img{
+        width: 100%;
+        display: inline-block;
+    }
+
+    .pic img:hover{
+        margin-top: -30px;
+        width:120% ;
+    }
+
+    .des{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        background-color: #fff;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .des .name{
+        width: 100%;
+    }
+
+    .des .name h2{
+        font-size: 20px;
+        margin-top: -10px;
+    }
+
+    .des .price{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        max-width: 550px;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(235, 235, 235);
+        padding: 30px 20px 20px 20px;
+    }
+
+    .des .price p{
+        font-size: 25px;
+        font-weight: 700;
+        color: #eb6d79;
+    }
+
+    .des .desc{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 100%;
+        height: 50%;
+        background-color: #fff;
+        border-radius: 15px;
+        border: 1px solid ;
+        border-color: rgb(210, 208, 208);
+        margin-top: 15px;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .des .desc h1{
+        font-size: 25px;
+        color: rgb(165, 165, 165);
+    }
+
+    .des .desc h2{
+        display: flex;
+        font-size: 18px;
+        color: rgb(165, 165, 165);
+        margin-top: -5px;
+    }
+
+    .des .button{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        padding: 30px 0 0 0;
+        width: 100%;
+        height: 100px;
+    }
+
+    .des .button form input{
+        color:#ffffff; 
+        text-align: center; 
+        width: 125px; 
+        height: 50px;
+        padding: 13px; 
+        background-color: #7365a2; 
+        border-radius: 10px; 
+        border-color: #7365a2; 
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+    @media screen and (max-width: 500px){
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 130%;
+            width: 100%;
+            margin-top: 300px;
+        }
+
+        .pic{
+
+            width: 100%;
+            height: 50%;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            border: 1px solid ;
+            border-color: rgb(210, 208, 208);
+        }
+        
+        .pic img{
+            max-width: 300px;
+             width: 100%;
+        }
+
+        .des{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            background-color: #fff;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .des .name{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            max-width: 550px;
+            width: 100%;
+        }
+
+        .des .name h1{
+            font-size: 25px;
+        }
+
+        .des .name h2{
+            font-size: 16px;
+            margin-top: -5px;
+        }
+        
+        .des .button{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            padding: 30px 0 0 0;
+            width: 100%;
+            height: 100px;
+        }
+        
+        .des .button .add input{
+            color:#ffffff; 
+            text-align: center; 
+            width: 125px; 
+            height: 50px;
+            padding: 8px; 
+            background-color: #7365a2; 
+            border-radius: 10px; 
+            border-color: #7365a2; 
+            font-weight: 700;
+        }
+        
+        .des .button .buy input{
+            color:#ffffff; 
+            text-align: center; 
+            width: 125px; 
+            height: 50px;
+            padding: 8px; 
+            background-color: #eb6d79; 
+            border-radius: 10px; 
+            border-color: #eb6d79; 
+            font-weight: 700;
+            margin-left: 10px ;
+        }
+
+    }
+
+
+

@@ -1,0 +1,118 @@
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha38">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://fontawesome.com/icons">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fa-solid fa-paw"></i></label>
+      <div class="content">
+        <div class="logo"><a href='/' class="image"> 
+          <img src="https://drive.google.com/uc?id=1LSxUx57jJTPDh1MRZK21zfeOKzmJVAk3" alt="" height="50px"> </a>
+        </div>
+        <ul class="links">
+          {% if user.is_authenticated %}
+          <li><a href="/profile/"><i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;{{ user.username }}</a></li>
+          <li><a href="/cart/">MY CART</a></li>
+          <li><a href="/about">ABOUT BEAR</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          {% else %}
+          <li><a href="/accounts/login/">REGISTER/LOGIN</a></li>
+          <li><a href="/profile/">MY ACCOUNT</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+</body>
+</html>
+
+<!-- request.COOKIES.get('cart') -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia%22%3E">
+    <link rel="stylesheet" href="fonts/thsarabunnew.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/checkout.css' %}">
+
+    <title>Checkout</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/958395935422050317/971499997768077342/hnet.com-image.ico">
+</head>
+
+<body>
+<div class="checkout">
+  <div class="address">
+    <div class="title1">Delivery Address</div>
+      <div class="top">
+        <div class="name">
+          <p class="names">{{order_items.0.profile.name}}</p>
+          <p class="mobile">{{order_items.0.profile.mobile}}</p>
+        </div>
+        <div class="add">
+          <p>{{order_items.0.profile.address}}</p><br>
+          <p>{{order_items.0.profile.postcode}}</p>
+        </div>
+      </div>
+  </div>
+  <div class="order">
+    <div class="head">
+      <div class="left">Product orders</div>
+      <div class="center">Price</div>
+      <div class="right">Quantity</div>
+    </div>
+    <div class="item-list">
+      <div class="scoll-bar">
+        {% for i in order_items %} 
+          <div class="Cart-Items">
+            <div class="image-box">
+              <img src="{{i.item.image.url}} " height="130px" >
+            </div>
+            <div class="about">
+              <p class="title">{{i.item.title}}</p>
+              <p class="subtitle">{{i.item.description}}</p>
+            </div>
+            <div class="price">
+              <div class="amount">{{i.item.unit_price}}$</div>
+            </div>
+            <div class="quantity">
+              <div class="count">1</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="place-order">
+      <form method="POST">
+        {% csrf_token %}
+        <img src="/qr_mobile/0624242621/1.11/qr.png" ><br>
+        <input type="submit" name="checkout" class="btn btn-primary" value="PLACE ORDER" onclick="window.location.href='/home/'">
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

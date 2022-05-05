@@ -1,0 +1,103 @@
+{% load static %}
+
+<html >
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha38">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons">
+
+    <title>Profile</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/958395935422050317/971499997768077342/hnet.com-image.ico">
+
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fa-solid fa-paw"></i></label>
+      <div class="content">
+      <div class="logo"><a href='/' class="image"> <img src="https://drive.google.com/uc?id=1LSxUx57jJTPDh1MRZK21zfeOKzmJVAk3" alt="" height="50px"> </a></div>
+        <ul  class="links">
+          {% if user.is_authenticated %}
+          <li><a href="/profile/"><i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;{{ user.username }}</a></li>
+          <li><a href="/cart/">MY CART</a></li>
+          <li><a href="/about/">ABOUT BEAR</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          {% else %}
+          <li><a href="/accounts/login/">REGISTER/LOGIN</a></li>
+          <li><a href="/profile/">MY ACCOUNT</a></li>
+          {% endif %}  
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>   
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia%22%3E">
+    <link rel="stylesheet" href="fonts/thsarabunnew.css" />
+  
+  </head>
+
+<body>
+  <div class="prof">
+    <div class ="row">
+      <div class="user">
+        <div class="dis">
+          <a href="#" class="avatar2">
+            <div class="img2">
+              <img src='{{request.user.profile.pic.url}}' >
+            </div>
+          </a>
+        </div>
+        <div class="name">
+          <h2>{{user}}</h2>
+          <span><a href="#"><i class="fa-solid fa-pencil"></i>Edit Account</a><span>
+        </div>
+      </div>
+      <div class="login-profile">
+        <div class="title">
+          <h1>My Profile Account</h1>
+          <p>Manage and protact your account</p>
+          <div class="line"></div>
+        </div>
+        <div class="edit">
+          {% block content %}
+            <form class ="registertion" action="/profile/" method="POST" >
+              <input type="hidden" name="csrfmiddlewaretoken" value="6yMdJgow0gc9JqLgqnYo7lUuI3VBB3jwZVUVAQuGSm5dSQ4LjShTUQqffXPiV3Lp">
+                <form action="#">
+                  <div class="user-details"> 
+                    {% csrf_token %} {{ form.as_p }}
+                    <div class="button">
+                      <input type="submit" value="SAVE">
+                    </div>   
+                  </div>
+                </form> 
+            </form>
+          {% endblock %}
+        </div> 
+      </div>            
+    </div>  
+  </div> 
+</body>
+</html>
+  

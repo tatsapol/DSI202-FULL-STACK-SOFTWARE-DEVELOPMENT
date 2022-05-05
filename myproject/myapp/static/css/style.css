@@ -1,0 +1,136 @@
+@font-face{font-family: "THSarabunNew, san-serif";}
+
+  body { 
+    font-family: 'THSarabunNew', sans-serif; 
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+
+  .home {
+    display:flex;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+  }
+
+  .flex-container {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .flex-container .card{
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    transition:0.3s ease-in-out;
+    height: auto;
+    width: auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid ;
+    border-color: rgb(210, 208, 208);
+    margin: 10px 10px 10px 10px;
+  }
+
+  .flex-container .card .imgBx{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    height: 60%;
+    width: 96%;
+    border-radius: 15px;
+    border: 1px solid ;
+    border-color: rgb(210, 208, 208);
+    margin: 5px 5px 0px 5px;
+    height: 240px;
+  }
+
+  .flex-container .card .imgBx img{
+    height: 100%;
+    display: inline-block;
+  }
+
+  .flex-container .card .imgBx img:hover{
+    margin-top: -30px;
+    height: 120%;
+  }
+
+  .flex-container .card .des{
+    text-align: center;
+    justify-content: center;
+    height: 45%;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .flex-container .card .des h2{
+    font-size: 28px;
+  }
+
+  .flex-container .card .des .card-text{
+    font-size: 10px;
+  }
+
+  .flex-container .card .des .price{
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .flex-container .card .des .ok{
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    height: 25%;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid ;
+    border-color: rgb(255, 255, 255);
+    padding: 10px;
+  }
+
+  .submit{
+    color:#ffffff; 
+    text-align: center; 
+    width: 125px; 
+    height: 50px;
+    padding: 8px; 
+    background-color: #7365a2; 
+    border-radius: 10px; 
+    border-color: #7365a2; 
+    font-weight: 700;
+  }
+
+  .button {
+    float: right;
+    display: flex;
+  }
+
+  .button .fa-cart-shopping{
+    font-size: 250%;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    color: #eb6d79;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 5px #c8c8c8;
+    border-radius: 50%;
+  }
+
